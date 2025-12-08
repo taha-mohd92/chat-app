@@ -21,14 +21,61 @@ A React Native chat application demonstrating modern mobile development patterns
 
 ## Quick Start
 
-Install dependencies and start the development server:
+### Prerequisites
+
+- Expo Go app installed on your physical device ([iOS](https://apps.apple.com/app/expo-go/id982107779) | [Android](https://play.google.com/store/apps/details?id=host.exp.exponent))
+- For iOS Simulator: Xcode installed (macOS only)
+- For Android Emulator: Android Studio with emulator setup
+
+### Installation
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/taha-mohd92/chat-app.git
+   cd chat-app
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server:**
+
+   ```bash
+   npx expo start
+   ```
+
+   **Note:** If you see a development build prompt, press `s` to switch to Expo Go mode.
+
+### Running the App
+
+#### Option 1: Physical Device (Recommended)
+
+1. Open Expo Go app on your device
+2. Scan the QR code displayed in your terminal
+3. Wait for the app to load
+
+#### Option 2: iOS Simulator (macOS only)
+
+- Press `i` in the terminal
+
+#### Option 3: Android Emulator
+
+- Ensure your emulator is running
+- Press `a` in the terminal, or
+
+### Common Commands
 
 ```bash
-npm install
-npm start
+npm start              # Start Expo development server
+npm test              # Run tests
+npm run test:watch    # Run tests in watch mode
+npm run test:coverage # Run tests with coverage report
+npx expo start -c     # Start with cache cleared (fixes bundler issues)
 ```
-
-Press 'a' for Android or 'i' for iOS.
 
 ## Project Structure
 
@@ -188,6 +235,5 @@ Uses `responserift.dev` demo API:
 
 ## Development Notes
 
-- **Expo New Architecture**: Enabled for better performance
-- **Safe Area Handling**: Prevents UI from overlapping notches
-- **Keyboard Avoidance**: Proper handling for chat input
+- **Expo Go Mode**: Using Expo Go for faster development (no native builds required)
+- **Keyboard Avoidance**: Proper handling for chat input with `KeyboardAvoidingView`
